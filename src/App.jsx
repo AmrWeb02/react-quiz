@@ -54,7 +54,7 @@ function App() {
   useEffect( () =>{
     const fetchData = async () =>{
       try{
-        const res = await fetch('https://amrweb02.github.io/react-quiz/data/questions.json');
+        const res = await fetch('/react-quiz/data/questions.json');
         const data = await res.json();
         console.log(data)
         dispatch({type:"fetched", payload:data.questions});
