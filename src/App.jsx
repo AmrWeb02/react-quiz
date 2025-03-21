@@ -13,6 +13,8 @@ import NextButton from './components/NextButton.jsx'
 import Progress from './components/Progress.jsx'
 import FinishScreen from './components/FinishScreen.jsx'
 import Timer from './components/Timer.jsx'
+
+import data from '../data/questions.json'
 const initialState = {
   questions:[],
   status: "loading", // Loading, error, ready, active, finished
@@ -54,9 +56,9 @@ function App() {
   useEffect( () =>{
     const fetchData = async () =>{
       try{
-        const res = await fetch('/react-quiz/data/questions.json');
-        const data = await res.json();
-        console.log(data)
+        // const res = await fetch('/react-quiz/data/questions.json');
+        // const data = await res.json();
+        // console.log(data)
         dispatch({type:"fetched", payload:data.questions});
       }
       catch(err){
