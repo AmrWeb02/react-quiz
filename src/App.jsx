@@ -58,6 +58,7 @@ function App() {
       try{
         // const res = await fetch('/react-quiz/data/questions.json');
         // const data = await res.json();
+        // console.log(data)
         dispatch({type:"fetched", payload:data.questions});
       }
       catch(err){
